@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+}
+.gradient-text {
+    background: linear-gradient(96.34deg, #FF4E83 0.62%, #FFBB54 97.92%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.gradient-border {
+    position: relative; 
+    z-index: 1; 
+}
+.gradient-border::before{
+    content: '';
+    background-color: #141414;
+    height: 196px;
+    width: 196px;
+    position: absolute;
+    border-radius: 50%;
+    left: 2px;
+    top: 2px;
+    z-index: 0;
+}
+
+.gradient-border::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 9999px; 
+    background: linear-gradient(135deg, #FF4E83 0%, #FFBB54 100%);
+    z-index: -1; 
+}
+
+@media (max-width: 768px) {
+    .gradient-border::before {
+        height: 100%;
+        width: 100%;
+        left: 1px;
+        top: 1px;
+    }
+    .gradient-border::after {
+        right: -2px;
+        bottom: -2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gradient-border::before {
+        height: 100%;
+        width: 100%;
+        left: 0.5px;
+        top: 0.5px;
+    }
+}
+
+/* styles/globals.css */
+.gradient-line {
+    height: 4px; /* Atur tinggi garis di sini */
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 53.75%, rgba(255, 255, 255, 0) 100%);
+}
+
+.title-section{
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+.title-section::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -21px;
+    right: 0;
+    bottom: 0;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, #FF4E83 0%, #FFBB54 100%);
+    z-index: -1;
+    width: 16px;
+    height: 16px;
+}
+.bt-tooltip{
+    position: relative;
+    z-index: 1;
+}
+.bt-tooltip::before {
+    content: '';
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    transform: translateX(-50%); 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #444444; 
+    width: 0;
+    height: 0;
+}
+
+li a.menu-active{
+    position: relative;
+    z-index: 1;
+}
+li a.menu-active::before{
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, #FF4E83 0%, #FFBB54 100%);
+    z-index: -1;
+    width: 8px;
+    height: 8px;
+}
