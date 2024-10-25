@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 // Fetch products from the mock API
 export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
-    const response = await fetch('https://my-json-server.typicode.com/your-username/your-repo/products'); // Replace with your JSON server URL
+    const response = await fetch('https://my-json-server.typicode.com/andriputra/product-catalog');
     return await response.json();
 });
 

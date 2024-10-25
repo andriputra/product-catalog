@@ -5,6 +5,8 @@ import Hero from "@/components/Hero";
 import Sidebar from "@/components/Sidebar";
 import Catalogue from "@/components/Catalogue";
 import Related from "@/components/Related";
+import { Provider } from 'react-redux';
+import store from '../store';
 
 export default function Home() {
     const [priceRange, setPriceRange] = useState([100, 500]);
@@ -16,6 +18,7 @@ export default function Home() {
     };
 
     return (
+      <Provider store={store}>
         <div className="min-h-screen bg-white text-black">
             <Navbar />
             <div className="px-3 md:px-0">
@@ -34,5 +37,6 @@ export default function Home() {
                 &copy; 2024 Flexbox Fashion. All rights reserved.
             </footer>
         </div>
+      </Provider>
     );
 }
