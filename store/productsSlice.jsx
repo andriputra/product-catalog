@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 // Fetch products from the mock API
 export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
-    const response = await fetch('https://my-json-server.typicode.com/andriputra/product-catalog');
+    const response = await fetch('https://cors-anywhere.herokuapp.com/https://raw.githubusercontent.com/andriputra/product-catalog/main/db.json');
     return await response.json();
 });
 

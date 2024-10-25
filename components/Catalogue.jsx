@@ -4,13 +4,14 @@ import { fetchProducts } from '../store/productsSlice';
 
 export default function Catalogue({ priceRange }) { 
   const dispatch = useDispatch();
-  const { items: products=[], loading } = useSelector((state) => state.products);
+  const { items: products=[] } = useSelector((state) => state.products);
 
   const [showModal, setShowModal] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
   const [sortOption, setSortOption] = useState("1");
+  const [loading, setLoading] = useState(false); 
 
   useEffect(() => {
     dispatch(fetchProducts());
