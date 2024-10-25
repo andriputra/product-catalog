@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartArrowDown, faCartShopping, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 
 const LanguageDropdown = () => {
@@ -45,7 +47,7 @@ const LanguageDropdown = () => {
   );
 };
 
-export default function Navbar() {
+export default function Navbar({cartCount }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -86,6 +88,12 @@ export default function Navbar() {
           <li><a href="#" className="text-gray-500 hover:text-black">Contact Us</a></li>
         </ul>
         <div className="hidden md:flex gap-4 items-center justify-center">
+          <div className="relative">
+            <FontAwesomeIcon icon={faCartArrowDown} />
+              <span className="absolute bottom-4 left-3 bg-red-500 text-white text-[10px] rounded-full w-[20px] h-[20px] flex items-center justify-center">
+                10
+              </span>
+          </div>
           <LanguageDropdown />
         </div>
       </div>

@@ -2,8 +2,8 @@ import Breadcrumb from './Breadcrumb';
 
 export default function Hero() {
   const breadcrumbItems = [
-    { label: 'Shop', href: '/shop' },
-    { label: 'Products', href: '/products' },
+    { label: 'Shop', href: '/' },
+    { label: 'Products', href: '/' },
     { label: 'Catalogue', isLast: true }, 
   ];
 

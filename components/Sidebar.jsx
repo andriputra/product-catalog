@@ -1,8 +1,11 @@
 import { useState } from "react";
 
-export default function Sidebar() {
+export default function Sidebar({ onPriceChange }) { 
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedPrice, setSelectedPrice] = useState([100, 500]);
+
+  const initialCategory = "";
+  const initialPrice = [100, 500];
 
   const productTypes = [
     { name: "Shirt", count: 126 },
@@ -24,8 +27,19 @@ export default function Sidebar() {
     return "bg-green-50 text-green-700 ring-green-600/20";
   };
 
+  const resetFilters = () => {
+    setSelectedCategory(initialCategory);
+    setSelectedPrice(initialPrice);
+    onPriceChange(initialPrice); 
+  };
+
+  const handlePriceChange = (value) => {
+    setSelectedPrice([100, value]);
+    onPriceChange([100, value]); 
+  };
+
   return (
-    <div className="border border-gray-400 p-4 rounded-lg">
+    <div className="border border-gray-300 p-4 rounded-[15px]">
       <h2 className="text-md font-bold uppercase mb-4">Filter Products</h2>
 
       {/* Dropdown for Category */}
@@ -76,7 +90,7 @@ export default function Sidebar() {
           max="500"
           value={selectedPrice[1]}
           className="w-full"
-          onChange={(e) => setSelectedPrice([100, Number(e.target.value)])}
+          onChange={(e) => handlePriceChange(Number(e.target.value))} 
         />
         <span className="block text-sm mt-2">
           Price: ${selectedPrice[0]} - ${selectedPrice[1]}
@@ -84,6 +98,11 @@ export default function Sidebar() {
       </div>
 
       <hr className="my-4" />
+      <button
+        onClick={resetFilters} 
+        className="rounded-full border w-full ring-1 ring-inset bg-red-50 text-red-700 ring-red-600/20 p-2 hover:bg-red-500 hover:text-white">
+        Reset All
+      </button>
     </div>
   );
 }

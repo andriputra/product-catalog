@@ -122,5 +122,10 @@ li a.menu-active::before{
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    -webkit-line-clamp: 3; /* Limits to 3 lines */
+    -webkit-line-clamp: 3; 
 }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
