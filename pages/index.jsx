@@ -10,7 +10,7 @@ import store from '../store';
 
 export default function Home() {
     const [priceRange, setPriceRange] = useState([100, 500]);
-    const [currentPage, setCurrentPage] = useState(1); // Add this line to manage current page state
+    const [currentPage, setCurrentPage] = useState(1); 
 
     const handlePriceChange = (newPriceRange) => {
         setPriceRange(newPriceRange); 

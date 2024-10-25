@@ -14,7 +14,6 @@ const productsSlice = createSlice({
         error: null,
     },
     reducers: {
-        // You can define additional synchronous actions here if needed
     },
     extraReducers: (builder) => {
         builder
