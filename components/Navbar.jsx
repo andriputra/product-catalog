@@ -19,10 +19,10 @@ const LanguageDropdown = () => {
     <div className="relative inline-block text-left">
       <button
         onClick={toggleDropdown}
-        className="inline-flex justify-center items-center w-full shadow-sm px-4 py-2 bg-transparent text-sm font-medium text-gray-700 focus:outline-none "
+        className="inline-flex justify-center items-center w-full px-4 py-2 bg-transparent text-sm font-medium text-gray-700 focus:outline-none"
       >
-        <Image src='/img/globe.png' alt="language" width={25} height={25} className='w-[25px] h-[25px]' />
-        <svg className="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#ffffff" aria-hidden="true">
+        <Image src='/globe.svg' alt="language" width={25} height={25} className='w-[25px] h-[25px]' />
+        <svg className="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#000000" aria-hidden="true">
           <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
         </svg>
       </button>
@@ -53,17 +53,17 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-black">
+    <nav className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center p-6">
-        <div className="text-white text-lg font-bold">
-          <Image src="/img/logo-w.png" alt="Logo" width={170} height={28} className="" />
+        <div className="text-black text-lg font-bold">
+          <Image src="/img/logo.png" alt="Logo" width={170} height={28} />
         </div>
 
         {/* Hamburger Icon */}
         <div className="md:hidden flex items-center">
           <button
             onClick={toggleMenu}
-            className="text-white focus:outline-none"
+            className="text-black focus:outline-none"
           >
             <svg
               className="w-8 h-8"
@@ -79,16 +79,13 @@ export default function Navbar() {
 
         {/* Menu for larger screens */}
         <ul className="hidden md:flex gap-10 items-center">
-          <li><a href="#" className="text-gray-400 hover:text-white">Home</a></li>
-          <li><a href="#" className="text-gray-400 hover:text-white">About Us</a></li>
-          <li><a href="#" className="text-white menu-active">Product</a></li>
-          <li><a href="#" className="text-gray-400 hover:text-white">Partner</a></li>
-          <li><a href="#" className="text-gray-400 hover:text-white">Contact Us</a></li>
+          <li><a href="#" className="text-gray-500 hover:text-black">Home</a></li>
+          <li><a href="#" className="text-gray-500 hover:text-black">About Us</a></li>
+          <li><a href="#" className="text-black menu-active">Product</a></li>
+          <li><a href="#" className="text-gray-500 hover:text-black">Partner</a></li>
+          <li><a href="#" className="text-gray-500 hover:text-black">Contact Us</a></li>
         </ul>
-
-        {/* User account and language dropdown */}
         <div className="hidden md:flex gap-4 items-center justify-center">
-          <a href="#">로그인</a>
           <LanguageDropdown />
         </div>
       </div>
@@ -97,14 +94,11 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden absolute right-0 z-10 w-full">
           <ul className="flex flex-col gap-4 p-4 text-center text-white bg-gray-800">
-            <li><a href="#" className="text-gray-400 hover:text-white">스튜디오</a></li>
-            <li><a href="#" className="text-gray-400 hover:text-white">워크센터</a></li>
-            <li><a href="#" className="text-gray-400 hover:text-white">손비서</a></li>
-            <li><a href="#" className="text-white menu-active">메타휴먼</a></li>
-            <li><a href="#" className="text-gray-400 hover:text-white">영상제작소</a></li>
-            <li><a href="#" className="text-gray-400 hover:text-white">공지사항</a></li>
-            <li><a href="#" className="text-gray-400 hover:text-white">제휴문의</a></li>
-            <li><a href="#" className="text-white hover:text-gray-300">로그인</a></li>
+            <li><a href="#" className="text-gray-400 hover:text-white">Home</a></li>
+            <li><a href="#" className="text-gray-400 hover:text-white">About Us</a></li>
+            <li><a href="#" className="text-white menu-active">Product</a></li>
+            <li><a href="#" className="text-gray-400 hover:text-white">Partner</a></li>
+            <li><a href="#" className="text-gray-400 hover:text-white">Contact Us</a></li>
             <li><LanguageDropdown /></li>
           </ul>
         </div>

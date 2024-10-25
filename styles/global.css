@@ -117,3 +117,10 @@ li a.menu-active::before{
     width: 8px;
     height: 8px;
 }
+
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 3; /* Limits to 3 lines */
+}
