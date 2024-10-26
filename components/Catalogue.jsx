@@ -9,7 +9,7 @@ export default function Catalogue({ priceRange }) {
   const [showModal, setShowModal] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 12;
+  const itemsPerPage = 20;
   const [sortOption, setSortOption] = useState("1");
   const [loading, setLoading] = useState(false); 
 
@@ -132,10 +132,10 @@ function ProductCard({ product, onDetailClick }) {
 
 function ProductDetailModal({ product, onClose, loading, setLoading }) {
   const handleAddToCart = () => {
-    setLoading(true); // Start loading
+    setLoading(true); 
     setTimeout(() => {
-      setLoading(false); // Stop loading after 3 seconds
-      onClose(); // Close modal after loading
+      setLoading(false); 
+      onClose(); 
     }, 3000);
   };
   
