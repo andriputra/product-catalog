@@ -61,22 +61,31 @@ export default function Navbar({cartCount }) {
           <Image src="/img/logo.png" alt="Logo" width={170} height={28} />
         </div>
 
-        {/* Hamburger Icon */}
-        <div className="md:hidden flex items-center">
-          <button
-            onClick={toggleMenu}
-            className="text-black focus:outline-none"
-          >
-            <svg
-              className="w-8 h-8"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+        <div className='flex flex-row gap-8 items-center'>
+          <div className="md:hidden relative">
+            <FontAwesomeIcon icon={faCartArrowDown} />
+              <span className="absolute bottom-4 left-3 bg-red-500 text-white text-[10px] rounded-full w-[20px] h-[20px] flex items-center justify-center">
+                10
+              </span>
+          </div>
+
+          {/* Hamburger Icon */}
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={toggleMenu}
+              className="text-black focus:outline-none"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-            </svg>
-          </button>
+              <svg
+                className="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+              </svg>
+            </button>
+          </div>
         </div>
 
         {/* Menu for larger screens */}
@@ -97,7 +106,6 @@ export default function Navbar({cartCount }) {
           <LanguageDropdown />
         </div>
       </div>
-
       {/* Dropdown menu for mobile view */}
       {isMenuOpen && (
         <div className="md:hidden absolute right-0 z-10 w-full">
