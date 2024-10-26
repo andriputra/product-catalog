@@ -1,9 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
-// Fetch products from the mock API
+// Fetch products from the mock API using axios
 export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
-    const response = await fetch('https://my-json-server.typicode.com/andriputra/product-catalog/db');
-    return await response.json();
+    const response = await axios.get('https://my-json-server.typicode.com/andriputra/product-catalog/products');
+    return response.data;
 });
 
 const productsSlice = createSlice({
@@ -13,8 +14,7 @@ const productsSlice = createSlice({
         loading: false,
         error: null,
     },
-    reducers: {
-    },
+    reducers: {},
     extraReducers: (builder) => {
         builder
             .addCase(fetchProducts.pending, (state) => {

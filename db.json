@@ -4,7 +4,7 @@
 			"id": 1,
 			"img": "/img/cat-1.jpg",
 			"name": "KNIT OTTOMAN COMB JACKET",
-			"price": "$300",
+			"price": "$457",
 			"desc": "Maintained the styling for pagination but made sure the buttons are still easily clickable on smaller screens."
 		},
 		{
@@ -18,14 +18,14 @@
 			"id": 3,
 			"img": "/img/cat-3.jpg",
 			"name": "KNIK JAZZ SERIES",
-			"price": "$300",
+			"price": "$127",
 			"desc": "based on screen size, allowing 2 columns on small screens, 3 on medium, and 4 on large screens."
 		},
 		{
 			"id": 4,
 			"img": "/img/cat-4.jpg",
 			"name": "KNIT OTTOMAN COMB JACKET",
-			"price": "$300",
+			"price": "$234",
 			"desc": "Adjusted the text sizes for better readability on different screen sizes using classes like"
 		},
 		{
@@ -39,14 +39,14 @@
 			"id": 6,
 			"img": "/img/cat-6.jpg",
 			"name": "KNIT LINE BLUE",
-			"price": "$290",
+			"price": "$500",
 			"desc": "Flexbox Direction: For the product items, I adjusted the flex direction from row to column for smaller screens (flex-col md:flex-row) to ensure images stack above the text content."
 		},
 		{
 			"id": 7,
 			"img": "/img/cat-1.jpg",
 			"name": "KNIT OTTOMAN COMB JACKET",
-			"price": "$300",
+			"price": "$236",
 			"desc": "Image Sizing: Set the image width to w-full md:w-1/2 to have full width on smaller screens and half-width on larger screens."
 		},
 		{
@@ -67,7 +67,7 @@
 			"id": 10,
 			"img": "/img/cat-4.jpg",
 			"name": "KNIT OTTOMAN COMB JACKET",
-			"price": "$300",
+			"price": "$342",
 			"desc": "Always test the design on various devices and orientations to ensure that it maintains a good layout and usability."
 		},
 		{
@@ -88,13 +88,14 @@
 			"id": 13,
 			"img": "/img/cat-4.jpg",
 			"name": "KNIT OTTOMAN COMB JACKET",
-			"price": "$300"
+			"price": "$123",
+			"desc": "Always test the design on various devices and orientations to ensure that it maintains a good layout and usability."
 		},
 		{
 			"id": 14,
 			"img": "/img/cat-5.jpg",
 			"name": "LONG JEANS",
-			"price": "$300",
+			"price": "$111",
 			"desc": "This implementation assumes that only two products are shown at once. If you want to show more or fewer products, adjust the translateX calculation and the CSS styles accordingly."
 		},
 		{
@@ -108,7 +109,7 @@
 			"id": 16,
 			"img": "/img/cat-1.jpg",
 			"name": "KNIT OTTOMAN COMB JACKET",
-			"price": "$300",
+			"price": "$267",
 			"desc": "Make sure to test the component to ensure the sliding effect behaves as expected."
 		},
 		{
@@ -117,6 +118,55 @@
 			"name": "SHIRT OTTOMAN SERIES",
 			"price": "$360",
 			"desc": "To ensure that two items slide at a time in the Related component, we need to adjust the sliding effect logic to properly handle the display of two items per slide. The key change is to modify the translation calculation so that it accommodates the width of two items."
+		},
+		{
+			"id": 18,
+			"img": "/img/cat-6.jpg",
+			"name": "KNIT LINE BLUE",
+			"price": "$290",
+			"desc": "You may want to consider adding a transition on the opacity for a more polished effect, especially when sliding between product sets."
+		},
+		{
+			"id": 19,
+			"img": "/img/cat-2.jpg",
+			"name": "KNIT LINE BLUE",
+			"price": "$321",
+			"desc": "You may want to consider adding a transition on the opacity for a more polished effect, especially when sliding between product sets opacity for a more polished effect."
+		},
+		{
+			"id": 20,
+			"img": "/img/cat-6.jpg",
+			"name": "KNIT LINE BLUE",
+			"price": "$120",
+			"desc": "You may want to consider adding a transition on the opacity for a more polished effect, especially when sliding between product sets."
+		},
+		{
+			"id": 21,
+			"img": "/img/cat-5.jpg",
+			"name": "KNIT LINE BLUE",
+			"price": "$500",
+			"desc": "You may want to consider adding a transition on the opacity for a more polished effect, especially when sliding between product sets."
+		},
+		{
+			"id": 22,
+			"img": "/img/cat-3.jpg",
+			"name": "KNIT OTTOMAN COMB JACKET",
+			"price": "$356",
+			"desc": "Always test the design on various devices and orientations to ensure that it maintains a good layout and usability."
+		},
+		{
+			"id": 23,
+			"img": "/img/cat-1.jpg",
+			"name": "KNIT OTTOMAN COMB JACKET",
+			"price": "$400",
+			"desc": "Always test the design on various devices and orientations to ensure that it maintains a good layout and usability."
+		},
+		{
+			"id": 24,
+			"img": "/img/cat-4.jpg",
+			"name": "KNIT OTTOMAN COMB JACKET",
+			"price": "$100",
+			"desc": "Always test the design on various devices and orientations to ensure that it maintains a good layout and usability."
 		}
 	]
 }
